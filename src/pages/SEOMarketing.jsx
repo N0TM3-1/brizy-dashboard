@@ -1,11 +1,13 @@
 function SEOMarketing() {
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-white">SEO & Marketing</h1>
+      <h1 className="text-3xl font-bold text-gray-900">SEO & Marketing</h1>
 
       {/* SEO Checklist */}
-      <div className="bg-gray-800 rounded-lg shadow p-6 border border-gray-700">
-        <h2 className="text-xl font-semibold mb-4 text-white">SEO Checklist</h2>
+      <div className="bg-white rounded-lg shadow p-6 border border-gray-200">
+        <h2 className="text-xl font-semibold mb-4 text-gray-900">
+          SEO Checklist
+        </h2>
         <div className="space-y-3">
           {[
             { item: "Meta titles and descriptions", completed: true },
@@ -18,22 +20,24 @@ function SEOMarketing() {
           ].map((task, index) => (
             <div
               key={index}
-              className="flex items-center space-x-3 p-3 border border-gray-600 rounded-lg bg-gray-700"
+              className="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg bg-gray-50"
             >
               <div
                 className={`w-5 h-5 rounded-full flex items-center justify-center ${
                   task.completed
-                    ? "bg-green-900 text-green-400"
-                    : "bg-gray-600 text-gray-400"
+                    ? "bg-green-100 text-green-600"
+                    : "bg-gray-300 text-gray-500"
                 }`}
               >
                 {task.completed ? "✓" : "○"}
               </div>
-              <span className={task.completed ? "text-white" : "text-gray-400"}>
+              <span
+                className={task.completed ? "text-gray-900" : "text-gray-500"}
+              >
                 {task.item}
               </span>
               {!task.completed && (
-                <button className="ml-auto text-blue-400 hover:text-blue-300 text-sm">
+                <button className="ml-auto text-blue-600 hover:text-blue-700 text-sm">
                   Fix
                 </button>
               )}
@@ -43,16 +47,16 @@ function SEOMarketing() {
       </div>
 
       {/* Meta Editor */}
-      <div className="bg-gray-800 rounded-lg shadow p-6 border border-gray-700">
-        <h2 className="text-xl font-semibold mb-4 text-white">
+      <div className="bg-white rounded-lg shadow p-6 border border-gray-200">
+        <h2 className="text-xl font-semibold mb-4 text-gray-900">
           Meta Title & Description Editor
         </h2>
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">
+            <label className="block text-sm font-medium mb-1 text-gray-700">
               Page
             </label>
-            <select className="w-full border border-gray-600 rounded-lg px-3 py-2 bg-gray-700 text-white">
+            <select className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-900">
               <option>Home</option>
               <option>About</option>
               <option>Services</option>
@@ -61,27 +65,27 @@ function SEOMarketing() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">
+            <label className="block text-sm font-medium mb-1 text-gray-700">
               Meta Title
             </label>
             <input
               type="text"
-              className="w-full border border-gray-600 rounded-lg px-3 py-2 bg-gray-700 text-white"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-900"
               placeholder="Professional Web Design Services | Your Company"
               defaultValue="Professional Web Design Services | Your Company"
             />
-            <p className="text-xs text-gray-400 mt-1">Character count: 52/60</p>
+            <p className="text-xs text-gray-500 mt-1">Character count: 52/60</p>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-300">
+            <label className="block text-sm font-medium mb-1 text-gray-700">
               Meta Description
             </label>
             <textarea
-              className="w-full border border-gray-600 rounded-lg px-3 py-2 h-20 bg-gray-700 text-white"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 h-20 bg-white text-gray-900"
               placeholder="Create stunning websites with our professional web design services..."
               defaultValue="Create stunning websites with our professional web design services. Custom designs, responsive layouts, and SEO optimization included."
             />
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-xs text-gray-500 mt-1">
               Character count: 128/160
             </p>
           </div>
@@ -92,8 +96,8 @@ function SEOMarketing() {
       </div>
 
       {/* Social Media Integrations */}
-      <div className="bg-gray-800 rounded-lg shadow p-6 border border-gray-700">
-        <h2 className="text-xl font-semibold mb-4 text-white">
+      <div className="bg-white rounded-lg shadow p-6 border border-gray-200">
+        <h2 className="text-xl font-semibold mb-4 text-gray-900">
           Social Media Integrations
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -105,18 +109,18 @@ function SEOMarketing() {
           ].map((social) => (
             <div
               key={social.platform}
-              className="flex items-center justify-between p-4 border border-gray-600 rounded-lg bg-gray-700"
+              className="flex items-center justify-between p-4 border border-gray-300 rounded-lg bg-gray-50"
             >
               <div className="flex items-center space-x-3">
                 <span className="text-2xl">{social.icon}</span>
-                <span className="font-medium text-white">
+                <span className="font-medium text-gray-900">
                   {social.platform}
                 </span>
               </div>
               <button
                 className={`px-4 py-2 rounded-lg text-sm transition-colors ${
                   social.connected
-                    ? "bg-green-900 text-green-300 hover:bg-green-800"
+                    ? "bg-green-100 text-green-700 hover:bg-green-200"
                     : "bg-blue-600 text-white hover:bg-blue-700"
                 }`}
               >
@@ -128,37 +132,37 @@ function SEOMarketing() {
       </div>
 
       {/* Analytics Integration */}
-      <div className="bg-gray-800 rounded-lg shadow p-6 border border-gray-700">
-        <h2 className="text-xl font-semibold mb-4 text-white">
+      <div className="bg-white rounded-lg shadow p-6 border border-gray-200">
+        <h2 className="text-xl font-semibold mb-4 text-gray-900">
           Analytics & Tracking
         </h2>
         <div className="space-y-4">
-          <div className="flex items-center justify-between p-4 border border-gray-600 rounded-lg bg-gray-700">
+          <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg bg-gray-50">
             <div className="flex items-center space-x-3">
               <span className="text-2xl">📊</span>
               <div>
-                <h3 className="font-medium text-white">Google Analytics</h3>
-                <p className="text-sm text-gray-400">
+                <h3 className="font-medium text-gray-900">Google Analytics</h3>
+                <p className="text-sm text-gray-500">
                   Track website visitors and behavior
                 </p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="bg-green-900 text-green-300 px-2 py-1 rounded text-xs">
+              <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">
                 Connected
               </span>
-              <button className="text-blue-400 hover:text-blue-300 text-sm">
+              <button className="text-blue-600 hover:text-blue-700 text-sm">
                 Configure
               </button>
             </div>
           </div>
 
-          <div className="flex items-center justify-between p-4 border border-gray-600 rounded-lg bg-gray-700">
+          <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg bg-gray-50">
             <div className="flex items-center space-x-3">
               <span className="text-2xl">📘</span>
               <div>
-                <h3 className="font-medium text-white">Facebook Pixel</h3>
-                <p className="text-sm text-gray-400">
+                <h3 className="font-medium text-gray-900">Facebook Pixel</h3>
+                <p className="text-sm text-gray-500">
                   Track conversions and optimize ads
                 </p>
               </div>
@@ -171,26 +175,28 @@ function SEOMarketing() {
       </div>
 
       {/* Email Marketing */}
-      <div className="bg-gray-800 rounded-lg shadow p-6 border border-gray-700">
-        <h2 className="text-xl font-semibold mb-4 text-white">
+      <div className="bg-white rounded-lg shadow p-6 border border-gray-200">
+        <h2 className="text-xl font-semibold mb-4 text-gray-900">
           Email Marketing
         </h2>
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center p-4 border border-gray-600 rounded-lg bg-gray-700">
+            <div className="text-center p-4 border border-gray-300 rounded-lg bg-gray-50">
               <div className="text-2xl mb-2">📧</div>
-              <h3 className="font-medium text-white">Newsletter Subscribers</h3>
-              <p className="text-2xl font-bold text-blue-400">1,234</p>
+              <h3 className="font-medium text-gray-900">
+                Newsletter Subscribers
+              </h3>
+              <p className="text-2xl font-bold text-blue-600">1,234</p>
             </div>
-            <div className="text-center p-4 border border-gray-600 rounded-lg bg-gray-700">
+            <div className="text-center p-4 border border-gray-300 rounded-lg bg-gray-50">
               <div className="text-2xl mb-2">📈</div>
-              <h3 className="font-medium text-white">Open Rate</h3>
-              <p className="text-2xl font-bold text-green-400">24.5%</p>
+              <h3 className="font-medium text-gray-900">Open Rate</h3>
+              <p className="text-2xl font-bold text-green-600">24.5%</p>
             </div>
-            <div className="text-center p-4 border border-gray-600 rounded-lg bg-gray-700">
+            <div className="text-center p-4 border border-gray-300 rounded-lg bg-gray-50">
               <div className="text-2xl mb-2">🎯</div>
-              <h3 className="font-medium text-white">Click Rate</h3>
-              <p className="text-2xl font-bold text-purple-400">3.2%</p>
+              <h3 className="font-medium text-gray-900">Click Rate</h3>
+              <p className="text-2xl font-bold text-purple-600">3.2%</p>
             </div>
           </div>
 
