@@ -2,9 +2,6 @@ function Sidebar({ activeSection, setActiveSection }) {
   const menuItems = [
     { id: "websites", label: "Website List", icon: "🌐" },
     { id: "clients", label: "Client List", icon: "👨🏼‍🦱" },
-    { id: "domain", label: "Domain & Hosting", icon: "🔗" },
-    { id: "blog", label: "Blog / CMS", icon: "📝" },
-    { id: "seo", label: "SEO & Marketing", icon: "📈" },
     { id: "settings", label: "Settings", icon: "⚙️" },
   ];
 

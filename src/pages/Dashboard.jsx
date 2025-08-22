@@ -2,9 +2,6 @@ import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import WebsiteList from "./WebsiteList";
 import ClientList from "./ClientList";
-import DomainHosting from "./DomainHosting";
-import BlogCMS from "./BlogCMS";
-import SEOMarketing from "./SEOMarketing";
 import Settings from "./Settings";
 
 function Dashboard() {
@@ -12,16 +9,10 @@ function Dashboard() {
 
   const renderContent = () => {
     switch (activeSection) {
-      case "dashboard":
+      case "websites":
         return <WebsiteList />;
       case "clients":
         return <ClientList />;
-      case "domain":
-        return <DomainHosting />;
-      case "blog":
-        return <BlogCMS />;
-      case "seo":
-        return <SEOMarketing />;
       case "settings":
         return <Settings />;
       default:

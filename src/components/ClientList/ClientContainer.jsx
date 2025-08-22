@@ -1,9 +1,9 @@
 import Client from "./Client";
-function WebsiteContainer() {
+function WebsiteContainer({ searchQuery }) {
   return (
     <div className="bg-gray-200 rounded-xl">
       <div className="p-2">
-        <Client />
+        <Client searchQuery={searchQuery} />
       </div>
     </div>
   );
